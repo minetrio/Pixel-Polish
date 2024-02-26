@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-    <title>Pixel Polish - Image Editor</title>
+    <title>pixPolish - Photo Editor</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -31,7 +31,7 @@
         <!-- Logo -->
         <div class="pixPolish-logo">
             <img class="logo-desktop" src="assets/logo.png" />
-            <img class="logo-mobile" src="assets/logo.png" />
+            <img class="logo-mobile" src="assets/logo-small.png" />
         </div>
         <!-- Menu -->
         <div class="pixPolish-top-bar-menu">
@@ -42,6 +42,7 @@
             <div class="pixPolish-redo">
                 <button id="pixPolish-redo" type="button" class="pixPolish-btn-simple tooltip" data-title="Redo" autocomplete="off" disabled><span class="material-icons">redo</span></button>
             </div>
+            
             <!-- New -->
             <div class="pixPolish-new">
                 <button id="pixPolish-new" type="button" class="pixPolish-btn primary pixPolish-modal-open" autocomplete="off" data-target="#modal-add-new"><span class="material-icons">add_circle</span><span class="pixPolish-btn-text">New</span></button>
@@ -64,9 +65,7 @@
         <button id="pixPolish-btn-text" type="button" class="pixPolish-icon-menu-btn" data-target="#pixPolish-text">
             <span class="material-icons">title</span><span class="pixPolish-icon-menu-title">Text</span>
         </button>
-        <!-- <button id="pixPolish-btn-qrcode" type="button" class="pixPolish-icon-menu-btn" data-target="#pixPolish-qrcode">
-            <span class="material-icons">qr_code</span><span class="pixPolish-icon-menu-title">QR Code</span>
-        </button> -->
+        
         <button id="pixPolish-btn-settings" type="button" class="pixPolish-icon-menu-btn stick-to-bottom" data-target="#pixPolish-settings">
             <span class="material-icons">settings</span><span class="pixPolish-icon-menu-title">Settings</span>
         </button>
@@ -484,6 +483,7 @@
                 </ul>
             </div>
             <!-- Adjust END -->
+
             <!-- Text START -->
             <div id="pixPolish-text" class="pixPolish-icon-panel-content panel-hide">
                 <!-- Add Text Button -->
@@ -686,7 +686,7 @@
                             <label for="pixPolish-img-upload" class="pixPolish-btn primary pixPolish-lg-btn btn-full"><span class="material-icons">upload</span><span>Upload from computer</span></label>
                         </div>
                         <!-- Media Library Button -->
-                        <!-- <button id="pixPolish-img-media-library" type="button" class="pixPolish-btn primary pixPolish-lg-btn btn-full pixPolish-modal-open" data-target="#modal-media-library"><span class="material-icons">photo_library</span>Select From Media Library</button> -->
+                        <button id="pixPolish-img-media-library" type="button" class="pixPolish-btn primary pixPolish-lg-btn btn-full pixPolish-modal-open" data-target="#modal-media-library"><span class="material-icons">photo_library</span>Select From Media Library</button>
                         <!-- Image Settings -->
                         <div id="pixPolish-image-settings" class="pixPolish-sub-settings">
                             <div class="pixPolish-control-wrap">
@@ -794,163 +794,7 @@
                 </div>
             </div>
             <!-- Image END -->
-            <!-- QR Code START -->
-            <div id="pixPolish-qrcode" class="pixPolish-icon-panel-content panel-hide">
-                <div id="pixPolish-qrcode-settings">
-                    <div class="pixPolish-control-wrap label-block">
-                        <label class="pixPolish-control-label">Text</label>
-                        <div class="pixPolish-control">
-                            <input type="text" id="pixPolish-qrcode-text" class="pixPolish-form-field" autocomplete="off" value="https://mysite.com" />
-                        </div>
-                    </div>
-                    <div class="pixPolish-control-wrap">
-                        <label class="pixPolish-control-label">Size</label>
-                        <div class="pixPolish-control">
-                            <input id="pixPolish-qrcode-size" class="pixPolish-form-field" type="number" value="300" autocomplete="off">
-                        </div>
-                    </div>
-                    <div class="pixPolish-control-wrap control-text-color">
-                        <label class="pixPolish-control-label">Fill Color</label>
-                        <div class="pixPolish-control">
-                            <input id="pixPolish-qrcode-fill" type="text" class="pixPolish-colorpicker disallow-empty" autocomplete="off" value="#333333" />
-                        </div>
-                    </div>
-                    <div class="pixPolish-control-wrap control-text-color">
-                        <label class="pixPolish-control-label">Background Color</label>
-                        <div class="pixPolish-control">
-                            <input id="pixPolish-qrcode-back" type="text" class="pixPolish-colorpicker disallow-empty" autocomplete="off" value="#FFFFFF" />
-                        </div>
-                    </div>
-                    <div class="pixPolish-control-wrap label-block">
-                        <label class="pixPolish-control-label slider-label">Rounded Corners<span>0</span></label>
-                        <div class="pixPolish-control">
-                            <input id="pixPolish-qrcode-rounded" type="range" min="0" max="100" value="0" step="1" class="pixPolish-slider" autocomplete="off">
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="pixPolish-control-wrap label-block">
-                        <label class="pixPolish-control-label">Label</label>
-                        <div class="pixPolish-control">
-                            <input type="text" id="pixPolish-qrcode-label" class="pixPolish-form-field" autocomplete="off" value="" />
-                        </div>
-                    </div>
-                    <div class="pixPolish-control-wrap control-text-color">
-                        <label class="pixPolish-control-label">Label Color</label>
-                        <div class="pixPolish-control">
-                            <input id="pixPolish-qrcode-label-color" type="text" class="pixPolish-colorpicker disallow-empty" autocomplete="off" value="#333333" />
-                        </div>
-                    </div>
-                    <div class="pixPolish-control-wrap label-block">
-                        <label class="pixPolish-control-label slider-label">Label Size<span>30</span></label>
-                        <div class="pixPolish-control">
-                            <input id="pixPolish-qrcode-label-size" type="range" min="0" max="100" value="30" step="1" class="pixPolish-slider" autocomplete="off">
-                        </div>
-                    </div>
-                    <div class="pixPolish-control-wrap label-block">
-                        <label class="pixPolish-control-label slider-label">Label Position X<span>50</span></label>
-                        <div class="pixPolish-control">
-                            <input id="pixPolish-qrcode-label-position-x" type="range" min="0" max="100" value="50" step="1" class="pixPolish-slider" autocomplete="off">
-                        </div>
-                    </div>
-                    <div class="pixPolish-control-wrap label-block">
-                        <label class="pixPolish-control-label slider-label">Label Position Y<span>50</span></label>
-                        <div class="pixPolish-control">
-                            <input id="pixPolish-qrcode-label-position-y" type="range" min="0" max="100" value="50" step="1" class="pixPolish-slider" autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-                <hr/>
-                <button id="pixPolish-generate-qr-code" type="button" class="pixPolish-btn primary pixPolish-lg-btn btn-full"><span class="material-icons">qr_code</span>Generate QR Code</button>
-            </div>
-             <!-- QR Code END -->
-            <!-- Drawing START -->
-            <div id="pixPolish-draw" class="pixPolish-icon-panel-content panel-hide">
-                <!-- Start Drawing Button -->
-                <div class="pixPolish-btn-set">
-                    <button id="pixPolish-draw-btn" type="button" class="pixPolish-btn primary pixPolish-lg-btn"><span class="material-icons">edit</span>Start Drawing</button>
-                    <button id="pixPolish-draw-undo" type="button" class="pixPolish-btn pixPolish-lg-btn" autocomplete="off" title="Undo" disabled><span class="material-icons">undo</span></button>
-                </div>
-                <!-- Drawing Setings -->
-                <div id="pixPolish-draw-settings" class="pixPolish-sub-settings">
-                    <div class="notice notice-info">You can draw a straight line by pressing the shift key.</div>
-                    <div class="pixPolish-control-wrap">
-                        <label class="pixPolish-control-label">Brush Type</label>
-                        <div class="pixPolish-control">
-                            <select id="pixPolish-brush-select" class="pixPolish-select" autocomplete="off">
-                                <option value="pencil" selected>Pencil</option>
-                                <option value="circle">Circle</option>
-                                <option value="spray">Spray</option>
-                                <option value="hline">H-line Pattern</option>
-                                <option value="vline">V-line Pattern</option>
-                                <option value="square">Square Pattern</option>
-                                <option value="erase">Erase BG Image</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="pixPolish-control-wrap">
-                        <label class="pixPolish-control-label">Brush Width</label>
-                        <div class="pixPolish-control">
-                            <input id="brush-width" class="pixPolish-form-field numeric-field" type="number" value="50" autocomplete="off" data-min="1" data-max="1000" data-step="1">
-                        </div>
-                    </div>
-                    <div id="pixPolish-brush-pattern-width" class="pixPolish-control-wrap">
-                        <label class="pixPolish-control-label">Pattern Width</label>
-                        <div class="pixPolish-control">
-                            <input id="brush-pattern-width" class="pixPolish-form-field numeric-field" type="number" value="10" autocomplete="off" data-min="1" data-max="1000" data-step="1">
-                        </div>
-                    </div>
-                    <div id="pixPolish-brush-pattern-distance" class="pixPolish-control-wrap">
-                        <label class="pixPolish-control-label">Pattern Distance</label>
-                        <div class="pixPolish-control">
-                            <input id="brush-pattern-distance" class="pixPolish-form-field numeric-field" type="number" value="5" autocomplete="off" data-min="1" data-max="1000" data-step="1">
-                        </div>
-                    </div>
-                    <div id="not-erase-brush">
-                        <div class="pixPolish-control-wrap control-text-color">
-                            <label class="pixPolish-control-label">Brush Color</label>
-                            <div class="pixPolish-control">
-                                <input id="brush-color" type="text" class="pixPolish-colorpicker allow-empty" autocomplete="off" value="#ffffff" />
-                            </div>
-                        </div>
-                        <div class="pixPolish-control-wrap conditional">
-                            <label class="pixPolish-control-label">Brush Shadow</label>
-                            <div class="pixPolish-control pixPolish-toggle-control">
-                                <label class="pixPolish-toggle">
-                                    <input id="pixPolish-brush-shadow" class="pixPolish-toggle-checkbox" data-conditional="#line-shadow-settings" type="checkbox" autocomplete="off" />
-                                    <div class="pixPolish-toggle-switch"></div>
-                                </label>
-                            </div>
-                        </div>
-                        <div id="line-shadow-settings" class="d-none conditional-settings">
-                            <div class="pixPolish-control-wrap">
-                                <label class="pixPolish-control-label">Blur</label>
-                                <div class="pixPolish-control">
-                                    <input id="brush-shadow-width" class="pixPolish-form-field" type="number" value="5" data-min="0" data-max="1000" step="1" autocomplete="off">
-                                </div>
-                            </div>
-                            <div class="pixPolish-control-wrap">
-                                <label class="pixPolish-control-label">Offset X</label>
-                                <div class="pixPolish-control">
-                                    <input id="brush-shadow-shadow-offset-x" class="pixPolish-form-field" type="number" value="5" data-min="0" data-max="100" step="1" autocomplete="off">
-                                </div>
-                            </div>
-                            <div class="pixPolish-control-wrap">
-                                <label class="pixPolish-control-label">Offset Y</label>
-                                <div class="pixPolish-control">
-                                    <input id="brush-shadow-shadow-offset-y" class="pixPolish-form-field" type="number" value="5" data-min="0" data-max="100" step="1" autocomplete="off">
-                                </div>
-                            </div>
-                            <div class="pixPolish-control-wrap control-text-color">
-                                <label class="pixPolish-control-label">Color</label>
-                                <div class="pixPolish-control">
-                                    <input id="brush-shadow-color" type="text" class="pixPolish-colorpicker allow-empty" autocomplete="off" value="#000000" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Drawing END -->
+
             <!-- Settings START -->
             <div id="pixPolish-settings" class="pixPolish-icon-panel-content panel-hide">
                 <div class="pixPolish-control-wrap control-text-color">
@@ -1013,7 +857,7 @@
         <div class="pixPolish-wrap">
             <div id="pixPolish-ruler" class="pixPolish-inner-wrap">
                 <!-- Ruler -->
-                
+                <div id="pixPolish-ruler-icon" class="closed" title="Ruler Menu"></div>
                 <!-- Canvas Content START -->
                 <div id="pixPolish-content" class="">
                     <!-- Canvas Image -->
@@ -1051,7 +895,37 @@
         </div>
     </div>
     <!-- Body END -->
-   
+    <!-- Toggle Right Button -->
+    <div id="pixPolish-toggle-right"><span class="material-icons">chevron_right</span></div>
+    <!-- Right Column START -->
+    <div id="pixPolish-right-col">
+        <h6 class="pixPolish-layers-title"><span class="material-icons">layers</span>Layers</h6>
+        <div id="pixPolish-no-layer">
+            No layers found. You can add text, element, image etc. to the canvas to create a layer. <a href="#" class="pixPolish-toggle-right">Close Panel</a>
+        </div>
+        <!-- Layer list - Don't remove it! -->
+        <ul id="pixPolish-layers"></ul>
+        <!-- Bulk delete layers -->
+        <div id="pixPolish-layer-delete-wrap">
+            <select id="pixPolish-layer-select" class="pixPolish-select" autocomplete="off">
+                <option value="all" selected>All Layers</option>
+                <option value="textbox">Texts</option>
+                <option value="image">Images</option>
+                <option value="frame">Frames</option>
+                <option value="element">Elements</option>
+                <option value="circle">Circles</option>
+                <option value="ellipse">Ellipses</option>
+                <option value="square">Squares</option>
+                <option value="rectangle">Rectangles</option>
+                <option value="triangle">Triangles</option>
+                <option value="trapezoid">Trapezoids</option>
+                <option value="emerald">Emeralds</option>
+                <option value="star">Stars</option>
+            </select>
+            <button id="pixPolish-layer-delete" class="pixPolish-btn primary"><span class="material-icons">delete</span></button>
+        </div>
+    </div>
+    <!-- Right Column END -->
     <!-- Modal Add New START -->
     <div id="modal-add-new" class="pixPolish-modal">
         <div class="pixPolish-modal-close" data-target="#modal-add-new"><span class="material-icons">close</span></div>
@@ -1061,9 +935,6 @@
                     <!-- Menu -->
                     <ul class="pixPolish-tabs-menu">
                         <li class="active" data-target="#modal-select-img"><span class="material-icons">file_upload</span>New Image</li>
-                        <!-- <li data-target="#modal-template-library"><span class="material-icons">photo_library</span>Template Library</li>
-                        <li data-target="#modal-my-templates"><span class="material-icons">photo_library</span>My Templates</li>
-                        <li data-target="#modal-blank-canvas"><span class="material-icons">crop_original</span>Blank Canvas</li> -->
                     </ul>
                     <!-- New Image -->
                     <div id="modal-select-img" class="pixPolish-tab active">
@@ -1074,8 +945,6 @@
                                         <input type="file" name="pixPolish-image-upload" id="pixPolish-image-upload" class="pixPolish-hidden-file" accept="image/png, image/jpeg" />
                                         <label for="pixPolish-image-upload" class="pixPolish-btn primary pixPolish-lg-btn"><span class="material-icons">upload</span><span>Upload Image</span></label>
                                     </div>
-                                    <!-- <button id="pixPolish-media-library" type="button" class="pixPolish-btn primary pixPolish-lg-btn pixPolish-modal-open" data-target="#modal-media-library"><span class="material-icons">photo_library</span>Select From Media Library
-                                    </button> -->
                                 </div>
                                 <div class="pixPolish-keep">
                                     <label class="pixPolish-checkbox">
@@ -1084,702 +953,6 @@
                                     </label>
                                     <div>Keep current objects and filters</div>
                                 </div>
-                            </div>
-                            <!-- <div>
-                                <div class="pixPolish-file-field">
-                                    <input type="file" name="pixPolish-json-upload" id="pixPolish-json-upload" class="pixPolish-hidden-file" accept=".json,application/JSON" />
-                                    <label for="pixPolish-json-upload" class="pixPolish-btn primary pixPolish-lg-btn"><span class="material-icons">upload</span><span>Upload Template</span></label>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                    <!-- Template Library -->
-                    <div id="modal-template-library" class="pixPolish-tab">
-                        <div class="pixPolish-templates-wrap">
-                            <div class="pixPolish-tabs">
-                                <ul class="pixPolish-tabs-menu">
-                                    <li class="active" data-target="#pixPolish-all-templates">All</li>
-                                    <li data-target="#pixPolish-templates-favorites">My Favorites</li>
-                                </ul>
-                                <div id="pixPolish-all-templates" class="pixPolish-tab active">
-                                    <div class="pixPolish-templates-menu-wrap">
-                                        <input id="pixPolish-template-search-keyword" type="search" class="pixPolish-form-field" placeholder="Search by keyword..." autocomplete="off" />
-                                        <select id="pixPolish-templates-menu" class="pixPolish-select pixPolish-select2" autocomplete="off">
-                                            <option value="all" selected>All Categories (44)</option>
-                                            <option value="blog-banners">Blog Banners (8)</option>
-                                            <option value="banner-ads">Banner Ads (15)</option>
-                                            <option value="collage">Collage (7)</option>
-                                            <option value="quote">Quote (5)</option>
-                                            <option value="medium-rectangle">Medium Rectangle Ads (2)</option>
-                                            <option value="leaderboard">Leaderboard Ads (4)</option>
-                                            <option value="billboard">Billboard Ads (2)</option>
-                                            <option value="facebook-ads">Facebook Ads (3)</option>
-                                            <option value="instagram-post">Instagram Post (5)</option>
-                                            <option value="facebook-post">Facebook Post (4)</option>
-                                            <option value="twitter-post">Twitter Post (3)</option>
-                                            <option value="youtube-thumbnail">Youtube Thumbnail (2)</option>
-                                        </select>
-                                        <button id="pixPolish-template-search" type="button" class="pixPolish-btn primary"><span class="material-icons">search</span></button>
-                                    </div>
-                                    <div class="pixPolish-templates-content">
-                                        <div class="pixPolish-grid-wrap">
-                                            <div id="pixPolish-all-templates-noimg" class="notice notice-warning d-none">Nothing found.</div>
-                                            <div id="pixPolish-templates-grid" class="pixPolish-grid template-grid template-selection paginated" data-perpage="21">
-                                                <div class="grid-item" data-keyword="Blog Banner - 2240x1260px" data-category="blog-banners">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/25.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/25.jpg" title="Blog Banner - 2240x1260px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">Blog Banner - 2240x1260px</div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Modern Collage - 2 Photos - 2000x1300px" data-category="collage">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/20.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/20.jpg" title="Modern Collage - 2 Photos - 2000x1300px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc"> Modern Collage - 2 Photos - 2000x1300px</div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Youtube Video Thumbnail - 1280x720px" data-category="youtube-thumbnail">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/15.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/15.jpg" title="Youtube Video Thumbnail - 1280x720px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">Youtube Video Thumbnail - 1280x720px</div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Black Friday Banner - Leaderboard - 728x90px" data-category="leaderboard">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/23.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/23.jpg" title="Black Friday Banner - Leaderboard - 728x90px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">Black Friday Banner - Leaderboard - 728x90px</div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Trending Music Video - Youtube Thumbnail - 1280x720px" data-category="youtube-thumbnail">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/14.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/14.jpg" title="Trending Music Video - Youtube Thumbnail - 1280x720px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">Trending Music Video - Youtube Thumbnail - 1280x720px</div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Kids Style Collage - 2 Photos - 2000x2000px" data-category="collage">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/18.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/18.jpg" title="Kids Style Collage - 2 Photos - 2000x2000px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">Kids Style Collage - 2 Photos - 2000x2000px</div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Cafe Banner - Billboard - 970x250px" data-category="billboard">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/28.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/28.jpg" title="Cafe Banner - Billboard - 970x250px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">Cafe Banner - Billboard - 970x250px</div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Beauty - Leaderboard - 728x90px" data-category="leaderboard">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/36.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/36.jpg" title="Beauty - Leaderboard - 728x90px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">Beauty - Leaderboard - 728x90px </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Digital Agency Banner - Leaderboard - 728x90px" data-category="leaderboard">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/8.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/8.jpg" title="Digital Agency Banner - Leaderboard - 728x90px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">Digital Agency Banner - Leaderboard - 728x90px </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Happy Birthday - Facebook Post - 940x788px" data-category="facebook-post">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/29.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/29.jpg" title="Happy Birthday - Facebook Post - 940x788px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">Happy Birthday - Facebook Post - 940x788px </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Blog Banner - 2240x1260px" data-category="blog-banners">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/27.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/27.jpg" title="Blog Banner - 2240x1260px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">Blog Banner - 2240x1260px</div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Collage - 3 Photos - 2000x2000px" data-category="collage">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/16.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/16.jpg" title="Collage - 3 Photos - 2000x2000px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">Collage - 3 Photos - 2000x2000px </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Banner - Twitter Post - 1600x900px" data-category="twitter-post">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/39.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/39.jpg" title="Banner - Twitter Post - 1600x900px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">Banner - Twitter Post - 1600x900px </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Christmas Sale - Instagram Post - Square - 1080x1080px" data-category="instagram-post">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/12.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/12.jpg" title="Christmas Sale - Instagram Post - Square - 1080x1080px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Christmas Sale - Instagram Post - Square - 1080x1080px
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Quote - Instagram Post - 1080x1080px" data-category="instagram-post">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/32.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/32.jpg" title="Quote - Instagram Post - 1080x1080px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Quote - Instagram Post - 1080x1080px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Modern Collage - 3 Photos - 2000x2000px" data-category="collage">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/22.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/22.jpg" title="Modern Collage - 3 Photos - 2000x2000px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Modern Collage - 3 Photos - 2000x2000px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Quote - 900x600px" data-category="quote">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/4.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/4.jpg" title="Quote - 900x600px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Quote - 900x600px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Blog Banner - 2240x1260px" data-category="blog-banners">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/26.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/26.jpg" title="Blog Banner - 2240x1260px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Blog Banner - 2240x1260px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Sale Banner - Instagram Post - Discount Offer - Square - 1080x1080px " data-category="instagram-post">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/1.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/1.jpg" title="Sale Banner - Instagram Post - Discount Offer - Square - 1080x1080px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Sale Banner - Instagram Post - Discount Offer - Square - 1080x1080px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Summer Sale - Facebook Ad - 1200x628px " data-category="facebook-ads">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/10.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/10.jpg" title="Summer Sale - Facebook Ad - 1200x628px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Summer Sale - Facebook Ad - 1200x628px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Kids Style Collage - 2 Photos - 2000x1300px " data-category="collage">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/17.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/17.jpg" title="Kids Style Collage - 2 Photos - 2000x1300px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Kids Style Collage - 2 Photos - 2000x1300px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Happy Childrens Day - Facebook Post - 940x788px" data-category="facebook-post">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/33.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/33.jpg" title="Happy Childrens Day - Facebook Post - 940x788px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Happy Childrens Day - Facebook Post - 940x788px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Fitness Banner - Medium Rectangle - 300x250px " data-category="banner-ads">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/6.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/6.jpg" title="Fitness Banner - Medium Rectangle - 300x250px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Fitness Banner - Medium Rectangle - 300x250px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Quote - Twitter Post - 1600x900px " data-category="quote">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/37.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/37.jpg" title="Quote - Twitter Post - 1600x900px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Quote - Twitter Post - 1600x900px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Real Estate - Facebook Post - 940x788px " data-category="facebook-post">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/41.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/41.jpg" title="Real Estate - Facebook Post - 940x788px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Real Estate - Facebook Post - 940x788px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Sale Banner - Facebook Ad - 1200x628px " data-category="facebook-ads">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/11.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/11.jpg" title="Sale Banner - Facebook Ad - 1200x628px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Sale Banner - Facebook Ad - 1200x628px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Collage - 5 Photos - 2000x1000px" data-category="collage">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/21.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/21.jpg" title="Collage - 5 Photos - 2000x1000px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Collage - 5 Photos - 2000x1000px </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Fitness Banner - Medium Rectangle - 300x250px" data-category="banner-ads">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/7.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/7.jpg" title="Fitness Banner - Medium Rectangle - 300x250px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Fitness Banner - Medium Rectangle - 300x250px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Quote - 800x600px" data-category="quote">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/3.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/3.jpg" title="Quote - 800x600px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Quote - 800x600px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Business Banner - Instagram Post - 1080x1080px" data-category="instagram-post">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/42.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/42.jpg" title="Business Banner - Instagram Post - 1080x1080px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Business Banner - Instagram Post - 1080x1080px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Business Facebook Post - 940x788px " data-category="facebook-post">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/13.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/13.jpg" title="Business Facebook Post - 940x788px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Business Facebook Post - 940x788px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="App Banner - 2000x1300px" data-category="banner-ads">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/5.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/5.jpg" title="App Banner - 2000x1300px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            App Banner - 2000x1300px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Business Blog Banner - 2240x1260px" data-category="blog-banners">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/34.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/34.jpg" title="Business Blog Banner - 2240x1260px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Business Blog Banner - 2240x1260px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Valentines Day - Instagram Post - Square - 1080x1080px" data-category="instagram-post">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/2.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/2.jpg" title="Valentines Day - Instagram Post - Square - 1080x1080px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Valentines Day - Instagram Post - Square - 1080x1080px
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Blog Banner - 2240x1260px" data-category="blog-banners">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/30.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/30.jpg" title="Blog Banner - 2240x1260px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Blog Banner - 2240x1260px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Stylish Collage - 3 Photos - 2000x2000px " data-category="collage">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/19.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/19.jpg" title="Stylish Collage - 3 Photos - 2000x2000px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Stylish Collage - 3 Photos - 2000x2000px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Pet Shop Banner - Billboard - 970x250px" data-category="billboard">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/9.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/9.jpg" title="Pet Shop Banner - Billboard - 970x250px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Pet Shop Banner - Billboard - 970x250px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Blog Banner - 2240x1260px" data-category="blog-banners">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/35.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/35.jpg" title="Blog Banner - 2240x1260px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Blog Banner - 2240x1260px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Christmas Banner - Leaderboard - 728x90px " data-category="leaderboard">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/24.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/24.jpg" title="Christmas Banner - Leaderboard - 728x90px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Christmas Banner - Leaderboard - 728x90px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Blog Banner - 2240x1260px" data-category="blog-banners">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/38.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/38.jpg" title="Blog Banner - 2240x1260px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Blog Banner - 2240x1260px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Fashion Banner - Facebook Ad - 1200x628px " data-category="facebook-ads">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/40.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/40.jpg" title="Fashion Banner - Facebook Ad - 1200x628px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Fashion Banner - Facebook Ad - 1200x628px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item" data-keyword="Quote - Twitter Post - 1600x900px " data-category="twitter-post">
-                                                    <div class="template-favorite">
-                                                        <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star_border</span></button>
-                                                    </div>
-                                                    <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/31.json">
-                                                        <div class="pixPolish-img-wrap">
-                                                            <div class="pixPolish-img-loader"></div>
-                                                            <img class="lazy" data-src="files/templates/img/31.jpg" title="Quote - Twitter Post - 1600x900px" />
-                                                        </div>
-                                                        <div class="pixPolish-masonry-item-desc">
-                                                            Quote - Twitter Post - 1600x900px 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="pixPolish-templates-favorites" class="pixPolish-tab">
-                                    <div class="pixPolish-grid template-grid template-selection paginated" data-perpage="21">
-                                        <div class="grid-item" data-keyword="Blog Banner - 2240x1260px" data-category="blog-banners">
-                                            <div class="template-favorite">
-                                                <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star</span></button>
-                                            </div>
-                                            <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/25.json">
-                                                <div class="pixPolish-img-wrap">
-                                                    <div class="pixPolish-img-loader"></div>
-                                                    <img class="lazy" data-src="files/templates/img/25.jpg" title="Blog Banner - 2240x1260px" />
-                                                </div>
-                                                <div class="pixPolish-masonry-item-desc">Blog Banner - 2240x1260px</div>
-                                            </div>
-                                        </div>
-                                        <div class="grid-item" data-keyword="Modern Collage - 2 Photos - 2000x1300px" data-category="collage">
-                                            <div class="template-favorite">
-                                                <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star</span></button>
-                                            </div>
-                                            <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/20.json">
-                                                <div class="pixPolish-img-wrap">
-                                                    <div class="pixPolish-img-loader"></div>
-                                                    <img class="lazy" data-src="files/templates/img/20.jpg" title="Modern Collage - 2 Photos - 2000x1300px" />
-                                                </div>
-                                                <div class="pixPolish-masonry-item-desc"> Modern Collage - 2 Photos - 2000x1300px</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- My Templates -->
-                    <div id="modal-my-templates" class="pixPolish-tab">
-                        <div id="pixPolish-my-templates-menu">
-                            <div></div>
-                            <div class="pixPolish-search-box">
-                                <input type="search" class="pixPolish-form-field" placeholder="Search by title..." autocomplete="off" />
-                                <button id="pixPolish-my-templates-search" type="button" class="pixPolish-btn primary"><span class="material-icons">search</span></button>
-                            </div>
-                        </div>
-                        <ul id="pixPolish-my-templates" class="pixPolish-template-list template-selection paginated" data-perpage="10">
-                            <li data-keyword="my template 1">
-                                <div>My Template 1</div>
-                                <div>
-                                    <button type="button" class="pixPolish-btn primary pixPolish-select-template" data-json="files/templates/json/1.json"><span class="material-icons">check</span>Select</button>
-                                    <button type="button" class="pixPolish-btn danger pixPolish-template-delete" data-target="files/templates/json/1.json"><span class="material-icons">clear</span>Delete</button>
-                                </div>
-                            </li>
-                            <li data-keyword="my template 2">
-                                <div>My Template 2</div>
-                                <div>
-                                    <button type="button" class="pixPolish-btn primary pixPolish-select-template" data-json="files/templates/json/2.json"><span class="material-icons">check</span>Select</button>
-                                    <button type="button" class="pixPolish-btn danger pixPolish-template-delete" data-target="files/templates/json/1.json"><span class="material-icons">clear</span>Delete</button>
-                                </div>
-                            </li>
-                        </ul>
-                        <div id="pixPolish-my-templates-noimg" class="notice notice-warning d-none">Nothing found.</div>
-                    </div>
-                    <!-- Blank Canvas -->
-                    <div id="modal-blank-canvas" class="pixPolish-tab">
-                        <div class="pixPolish-control-group">
-                            <div>
-                                <label>Size</label>
-                                <select id="pixPolish-canvas-size-select" class="pixPolish-select" autocomplete="off">
-                                    <option selected value="custom">Custom</option>
-                                    <option value="blog-banner">Blog Banner</option>
-                                    <option value="fb-cover">Facebook Cover</option>
-                                    <option value="fb-ad">Facebook Ad</option>
-                                    <option value="instagram">Instagram Post</option>
-                                    <option value="pinterest">Pinterest Post</option>
-                                    <option value="fb-post">Facebook Post</option>
-                                    <option value="twitter-post">Twitter Post</option>
-                                    <option value="youtube">Youtube Thumbnail</option>
-                                    <option value="wallpaper">Wallpaper</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label>Width</label>
-                                <input id="pixPolish-canvas-width" class="pixPolish-form-field" type="number" value="800" data-min="1" data-max="10000" autocomplete="off">
-                            </div>
-                            <div>
-                                <label>Height</label>
-                                <input id="pixPolish-canvas-height" class="pixPolish-form-field" type="number" value="800" data-min="1" data-max="10000" autocomplete="off">
-                            </div>
-                            <div>
-                                <label>Background</label>
-                                <input id="pixPolish-canvas-color" type="text" class="pixPolish-colorpicker allow-empty" autocomplete="off" value="" />
-                            </div>
-                            <div>
-                                <button id="pixPolish-canvas-create" type="button" class="pixPolish-btn primary"><span class="material-icons">done</span>Create</button>
                             </div>
                         </div>
                     </div>
@@ -1801,7 +974,7 @@
                                     <label>File Name</label>
                                     <input id="pixPolish-download-name" class="pixPolish-form-field pixPolish-file-name" type="text" value="" autocomplete="off" data-default="">
                                 </div>
-                                <button id="pixPolish-download" type="button" class="pixPolish-btn primary"><span class="material-icons">download</span>Download As Image</button>
+                                <button id="pixPolish-download" type="button" class="pixPolish-btn primary"><span class="material-icons">download</span>Download</button>
                             </div>
                             <div class="pixPolish-block-33">
                                 <div>
@@ -1844,194 +1017,6 @@
         </div>
     </div>
     <!-- Modal Save END -->
-    <!-- Modal Media Library START -->
-    <div id="modal-media-library" class="pixPolish-modal">
-        <div class="pixPolish-modal-close" data-target="#modal-media-library"><span class="material-icons">close</span>
-        </div>
-        <div class="pixPolish-modal-wrap">
-            <div class="pixPolish-modal-inner">
-                <div class="pixPolish-tabs">
-                    <!-- Menu -->
-                    <ul class="pixPolish-tabs-menu">
-                        <li class="active" data-target="#library-my-images"><span class="material-icons">photo_library</span>My Images</li>
-                        <li data-target="#library-all-images"><span class="material-icons">photo_library</span>Other Images
-                        </li>
-                    </ul>
-                    <!-- My Images -->
-                    <div id="library-my-images" class="pixPolish-tab active">
-                        <div id="pixPolish-library-my-menu">
-                            <div>
-                                <form class="uploadImgToLibrary" enctype="multipart/form-data">
-                                    <div class="pixPolish-file-field">
-                                        <input type="file" name="pixPolish-library-upload-img" id="pixPolish-library-upload-img" class="pixPolish-hidden-file" accept="image/png, image/jpeg" />
-                                        <label for="pixPolish-library-upload-img" class="pixPolish-btn primary"><span class="material-icons">upload</span><span>Upload Image</span></label>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="pixPolish-search-box">
-                                <input type="search" class="pixPolish-form-field" placeholder="Search by title..." autocomplete="off" />
-                                <button id="pixPolish-library-my-search" type="button" class="pixPolish-btn primary"><span class="material-icons">search</span></button>
-                            </div>
-                        </div>
-                        <div id="pixPolish-library-my" class="pixPolish-grid media-library-grid paginated" data-perpage="18">
-                            <div class="pixPolish-masonry-item" data-keyword="lorem kotem">
-                                <div class="pixPolish-library-delete" data-target=""><span class="material-icons">remove</span></div>
-                                <div class="pixPolish-masonry-item-inner">
-                                    <div class="pixPolish-img-wrap">
-                                        <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="assets/placeholder.jpg" data-full="assets/placeholder-big.jpg" data-filename="Lorem" title="Lorem ipsum dolor" />
-                                    </div>
-                                    <div class="pixPolish-masonry-item-desc">Lorem ipsum dolor</div>
-                                </div>
-                            </div>
-                            <div class="pixPolish-masonry-item" data-keyword="ipsum">
-                                <div class="pixPolish-library-delete" data-target=""><span class="material-icons">remove</span></div>
-                                <div class="pixPolish-masonry-item-inner">
-                                    <div class="pixPolish-img-wrap">
-                                        <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="assets/placeholder.jpg" data-full="assets/placeholder-big.jpg" data-filename="Lorem" title="Lorem ipsum dolor" />
-                                    </div>
-                                    <div class="pixPolish-masonry-item-desc">Lorem ipsum dolor</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="pixPolish-library-my-noimg" class="notice notice-warning d-none">Nothing found.</div>
-                    </div>
-                    <!-- All Images -->
-                    <div id="library-all-images" class="pixPolish-tab">
-                        <div id="pixPolish-library-all-menu">
-                            <div></div>
-                            <div class="pixPolish-search-box">
-                                <input type="search" class="pixPolish-form-field" placeholder="Search by title..." autocomplete="off" />
-                                <button id="pixPolish-library-all-search" type="button" class="pixPolish-btn primary"><span class="material-icons">search</span></button>
-                            </div>
-                        </div>
-                        <div id="pixPolish-library-all" class="pixPolish-grid media-library-grid paginated" data-perpage="18">
-                            <div class="pixPolish-masonry-item" data-keyword="lorem">
-                                <div class="pixPolish-library-delete" data-target=""><span class="material-icons">remove</span></div>
-                                <div class="pixPolish-masonry-item-inner">
-                                    <div class="pixPolish-img-wrap">
-                                        <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="assets/placeholder.jpg" data-full="assets/placeholder-big.jpg" data-filename="Lorem" title="Lorem"
-                                        />
-                                    </div>
-                                    <div class="pixPolish-masonry-item-desc">Lorem ipsum dolor</div>
-                                </div>
-                            </div>
-                            <div class="pixPolish-masonry-item" data-keyword="ipsum">
-                                <div class="pixPolish-library-delete" data-target=""><span class="material-icons">remove</span></div>
-                                <div class="pixPolish-masonry-item-inner">
-                                    <div class="pixPolish-img-wrap">
-                                        <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="assets/placeholder.jpg" data-full="assets/placeholder-big.jpg" data-filename="Lorem" title="Lorem"
-                                        />
-                                    </div>
-                                    <div class="pixPolish-masonry-item-desc">Lorem ipsum dolor</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="pixPolish-library-all-noimg" class="notice notice-warning d-none"><strong>Nothing found.</strong></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Media Library END -->
-    <!-- Modal SVG Library START -->
-    <div id="modal-svg-library" class="pixPolish-modal">
-        <div class="pixPolish-modal-close" data-target="#modal-svg-library"><span class="material-icons">close</span>
-        </div>
-        <div class="pixPolish-modal-wrap">
-            <div class="pixPolish-modal-inner">
-                <div class="pixPolish-tabs">
-                    <!-- Menu -->
-                    <ul class="pixPolish-tabs-menu">
-                        <li class="active" data-target="#svg-library-my-images"><span class="material-icons">photo_library</span>My SVGs</li>
-                        <li data-target="#svg-library-all-images"><span class="material-icons">photo_library</span>Other SVGs
-                        </li>
-                    </ul>
-                    <!-- My SVGs -->
-                    <div id="svg-library-my-images" class="pixPolish-tab active">
-                        <div id="pixPolish-svg-library-my-menu">
-                            <div>
-                                <form class="uploadSVGToLibrary" enctype="multipart/form-data">
-                                    <div class="pixPolish-file-field">
-                                        <input type="file" name="pixPolish-svg-library-upload-img" id="pixPolish-svg-library-upload-img" class="pixPolish-hidden-file" accept="image/svg+xml" />
-                                        <label for="pixPolish-svg-library-upload-img" class="pixPolish-btn primary"><span class="material-icons">upload</span><span>Upload Image</span></label>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="pixPolish-search-box">
-                                <input type="search" class="pixPolish-form-field" placeholder="Search by title..." autocomplete="off" />
-                                <button id="pixPolish-svg-library-my-search" type="button" class="pixPolish-btn primary"><span class="material-icons">search</span></button>
-                            </div>
-                        </div>
-                        <div id="pixPolish-svg-library-my" class="pixPolish-grid svg-library-grid paginated" data-perpage="18">
-                            <div class="pixPolish-masonry-item" data-keyword="Abstract Shape">
-                                <div class="pixPolish-library-delete" data-target=""><span class="material-icons">remove</span></div>
-                                <div class="pixPolish-masonry-item-inner">
-                                    <div class="pixPolish-img-wrap">
-                                        <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="files/elements/abstract-shapes/1.svg" data-full="files/elements/abstract-shapes/1.svg" data-filename="abstract-shape" title="Abstract Shape"
-                                        />
-                                    </div>
-                                    <div class="pixPolish-masonry-item-desc">Abstract Shape</div>
-                                </div>
-                            </div>
-                            <div class="pixPolish-masonry-item" data-keyword="another shape">
-                                <div class="pixPolish-library-delete" data-target=""><span class="material-icons">remove</span></div>
-                                <div class="pixPolish-masonry-item-inner">
-                                    <div class="pixPolish-img-wrap">
-                                        <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="files/elements/abstract-shapes/2.svg" data-full="files/elements/abstract-shapes/2.svg" data-filename="another-shape" title="Another Shape"
-                                        />
-                                    </div>
-                                    <div class="pixPolish-masonry-item-desc">Another Shape</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="pixPolish-svg-library-my-noimg" class="notice notice-warning d-none">Nothing found.</div>
-                    </div>
-                    <!-- All SVGs -->
-                    <div id="svg-library-all-images" class="pixPolish-tab">
-                        <div id="pixPolish-svg-library-all-menu">
-                            <div></div>
-                            <div class="pixPolish-search-box">
-                                <input type="search" class="pixPolish-form-field" placeholder="Search by title..." autocomplete="off" />
-                                <button id="pixPolish-svg-library-all-search" type="button" class="pixPolish-btn primary"><span class="material-icons">search</span></button>
-                            </div>
-                        </div>
-                        <div id="pixPolish-svg-library-all" class="pixPolish-grid svg-library-grid paginated" data-perpage="18">
-                            <div class="pixPolish-masonry-item" data-keyword="Abstract Shape">
-                                <div class="pixPolish-library-delete" data-target=""><span class="material-icons">remove</span></div>
-                                <div class="pixPolish-masonry-item-inner">
-                                    <div class="pixPolish-img-wrap">
-                                        <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="files/elements/abstract-shapes/1.svg" data-full="files/elements/abstract-shapes/1.svg" data-filename="abstract-shape" title="Abstract Shape"
-                                        />
-                                    </div>
-                                    <div class="pixPolish-masonry-item-desc">Abstract Shape</div>
-                                </div>
-                            </div>
-                            <div class="pixPolish-masonry-item" data-keyword="another shape">
-                                <div class="pixPolish-library-delete" data-target=""><span class="material-icons">remove</span></div>
-                                <div class="pixPolish-masonry-item-inner">
-                                    <div class="pixPolish-img-wrap">
-                                        <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="files/elements/abstract-shapes/2.svg" data-full="files/elements/abstract-shapes/2.svg" data-filename="another-shape" title="Another Shape"
-                                        />
-                                    </div>
-                                    <div class="pixPolish-masonry-item-desc">Another Shape</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="pixPolish-svg-library-all-noimg" class="notice notice-warning d-none"><strong>Nothing found.</strong></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal SVG Library END -->
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
