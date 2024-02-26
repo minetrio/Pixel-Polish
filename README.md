@@ -6,7 +6,7 @@ Fabric Js :-- Fabric.js is a JavaScript library that makes working with the HTML
 .A layer system that makes it easy to organize and manage objects on the canvas.
 .A number of event handlers that make it easy to respond to user input. .A number of utility functions that make it easier to work with the canvas element.
 
- Here are some of the benefits of using Fabric.js:
+ # Here are some of the benefits of using Fabric.js :-
 .It is easy to use, even for beginners. 
 .It is well-documented and has a large community of users. 
 .It is open source and free to use. 
