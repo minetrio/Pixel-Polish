@@ -12,4 +12,4 @@ Fabric Js :-- Fabric.js is a JavaScript library that makes working with the HTML
 .It is open source and free to use. 
 .It is compatible with all major browsers.
 
-You can check out fabricJS <a href="https://fabricjs.com/">here</a>
+You can check out fabricJS <a href="https://fabricjs.com/" target="_blank">here</a>
