@@ -42,7 +42,9 @@
             <div class="pixPolish-redo">
                 <button id="pixPolish-redo" type="button" class="pixPolish-btn-simple tooltip" data-title="Redo" autocomplete="off" disabled><span class="material-icons">redo</span></button>
             </div>
-            
+            <div class="pixPolish-history">
+                <button id="pixPolish-history" type="button" class="pixPolish-btn-simple pixPolish-modal-open tooltip" data-title="History" autocomplete="off" data-target="#modal-history" disabled><span class="material-icons">history</span></button>
+            </div>
             <!-- New -->
             <div class="pixPolish-new">
                 <button id="pixPolish-new" type="button" class="pixPolish-btn primary pixPolish-modal-open" autocomplete="off" data-target="#modal-add-new"><span class="material-icons">add_circle</span><span class="pixPolish-btn-text">New</span></button>
@@ -65,7 +67,15 @@
         <button id="pixPolish-btn-text" type="button" class="pixPolish-icon-menu-btn" data-target="#pixPolish-text">
             <span class="material-icons">title</span><span class="pixPolish-icon-menu-title">Text</span>
         </button>
-        
+        <button id="pixPolish-btn-image" type="button" class="pixPolish-icon-menu-btn" data-target="#pixPolish-bg">
+            <span class="material-icons">image</span><span class="pixPolish-icon-menu-title">Background</span>
+        </button>
+        <button id="pixPolish-btn-qrcode" type="button" class="pixPolish-icon-menu-btn" data-target="#pixPolish-qrcode">
+            <span class="material-icons">qr_code</span><span class="pixPolish-icon-menu-title">QR Code</span>
+        </button>
+        <button id="pixPolish-btn-draw" type="button" class="pixPolish-icon-menu-btn" data-target="#pixPolish-draw">
+            <span class="material-icons">brush</span><span class="pixPolish-icon-menu-title">Brushes</span>
+        </button>
         <button id="pixPolish-btn-settings" type="button" class="pixPolish-icon-menu-btn stick-to-bottom" data-target="#pixPolish-settings">
             <span class="material-icons">settings</span><span class="pixPolish-icon-menu-title">Settings</span>
         </button>
@@ -483,7 +493,163 @@
                 </ul>
             </div>
             <!-- Adjust END -->
-
+                        <!-- QR Code START -->
+                        <div id="pixPolish-qrcode" class="pixPolish-icon-panel-content panel-hide">
+                            <div id="pixPolish-qrcode-settings">
+                                <div class="pixPolish-control-wrap label-block">
+                                    <label class="pixPolish-control-label">Text</label>
+                                    <div class="pixPolish-control">
+                                        <input type="text" id="pixPolish-qrcode-text" class="pixPolish-form-field" autocomplete="off" value="https://mysite.com" />
+                                    </div>
+                                </div>
+                                <div class="pixPolish-control-wrap">
+                                    <label class="pixPolish-control-label">Size</label>
+                                    <div class="pixPolish-control">
+                                        <input id="pixPolish-qrcode-size" class="pixPolish-form-field" type="number" value="300" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="pixPolish-control-wrap control-text-color">
+                                    <label class="pixPolish-control-label">Fill Color</label>
+                                    <div class="pixPolish-control">
+                                        <input id="pixPolish-qrcode-fill" type="text" class="pixPolish-colorpicker disallow-empty" autocomplete="off" value="#333333" />
+                                    </div>
+                                </div>
+                                <div class="pixPolish-control-wrap control-text-color">
+                                    <label class="pixPolish-control-label">Background Color</label>
+                                    <div class="pixPolish-control">
+                                        <input id="pixPolish-qrcode-back" type="text" class="pixPolish-colorpicker disallow-empty" autocomplete="off" value="#FFFFFF" />
+                                    </div>
+                                </div>
+                                <div class="pixPolish-control-wrap label-block">
+                                    <label class="pixPolish-control-label slider-label">Rounded Corners<span>0</span></label>
+                                    <div class="pixPolish-control">
+                                        <input id="pixPolish-qrcode-rounded" type="range" min="0" max="100" value="0" step="1" class="pixPolish-slider" autocomplete="off">
+                                    </div>
+                                </div>
+                                <hr/>
+                                <div class="pixPolish-control-wrap label-block">
+                                    <label class="pixPolish-control-label">Label</label>
+                                    <div class="pixPolish-control">
+                                        <input type="text" id="pixPolish-qrcode-label" class="pixPolish-form-field" autocomplete="off" value="" />
+                                    </div>
+                                </div>
+                                <div class="pixPolish-control-wrap control-text-color">
+                                    <label class="pixPolish-control-label">Label Color</label>
+                                    <div class="pixPolish-control">
+                                        <input id="pixPolish-qrcode-label-color" type="text" class="pixPolish-colorpicker disallow-empty" autocomplete="off" value="#333333" />
+                                    </div>
+                                </div>
+                                <div class="pixPolish-control-wrap label-block">
+                                    <label class="pixPolish-control-label slider-label">Label Size<span>30</span></label>
+                                    <div class="pixPolish-control">
+                                        <input id="pixPolish-qrcode-label-size" type="range" min="0" max="100" value="30" step="1" class="pixPolish-slider" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="pixPolish-control-wrap label-block">
+                                    <label class="pixPolish-control-label slider-label">Label Position X<span>50</span></label>
+                                    <div class="pixPolish-control">
+                                        <input id="pixPolish-qrcode-label-position-x" type="range" min="0" max="100" value="50" step="1" class="pixPolish-slider" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="pixPolish-control-wrap label-block">
+                                    <label class="pixPolish-control-label slider-label">Label Position Y<span>50</span></label>
+                                    <div class="pixPolish-control">
+                                        <input id="pixPolish-qrcode-label-position-y" type="range" min="0" max="100" value="50" step="1" class="pixPolish-slider" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <button id="pixPolish-generate-qr-code" type="button" class="pixPolish-btn primary pixPolish-lg-btn btn-full"><span class="material-icons">qr_code</span>Generate QR Code</button>
+                        </div>
+                         <!-- QR Code END -->
+                                     <!-- Drawing START -->
+            <div id="pixPolish-draw" class="pixPolish-icon-panel-content panel-hide">
+                <!-- Start Drawing Button -->
+                <div class="pixPolish-btn-set">
+                    <button id="pixPolish-draw-btn" type="button" class="pixPolish-btn primary pixPolish-lg-btn"><span class="material-icons">edit</span>Start Drawing</button>
+                    <button id="pixPolish-draw-undo" type="button" class="pixPolish-btn pixPolish-lg-btn" autocomplete="off" title="Undo" disabled><span class="material-icons">undo</span></button>
+                </div>
+                <!-- Drawing Setings -->
+                <div id="pixPolish-draw-settings" class="pixPolish-sub-settings">
+                    <div class="notice notice-info">You can draw a straight line by pressing the shift key.</div>
+                    <div class="pixPolish-control-wrap">
+                        <label class="pixPolish-control-label">Brush Type</label>
+                        <div class="pixPolish-control">
+                            <select id="pixPolish-brush-select" class="pixPolish-select" autocomplete="off">
+                                <option value="pencil" selected>Pencil</option>
+                                <option value="circle">Circle</option>
+                                <option value="spray">Spray</option>
+                                <option value="hline">H-line Pattern</option>
+                                <option value="vline">V-line Pattern</option>
+                                <option value="square">Square Pattern</option>
+                                <option value="erase">Erase BG Image</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="pixPolish-control-wrap">
+                        <label class="pixPolish-control-label">Brush Width</label>
+                        <div class="pixPolish-control">
+                            <input id="brush-width" class="pixPolish-form-field numeric-field" type="number" value="50" autocomplete="off" data-min="1" data-max="1000" data-step="1">
+                        </div>
+                    </div>
+                    <div id="pixPolish-brush-pattern-width" class="pixPolish-control-wrap">
+                        <label class="pixPolish-control-label">Pattern Width</label>
+                        <div class="pixPolish-control">
+                            <input id="brush-pattern-width" class="pixPolish-form-field numeric-field" type="number" value="10" autocomplete="off" data-min="1" data-max="1000" data-step="1">
+                        </div>
+                    </div>
+                    <div id="pixPolish-brush-pattern-distance" class="pixPolish-control-wrap">
+                        <label class="pixPolish-control-label">Pattern Distance</label>
+                        <div class="pixPolish-control">
+                            <input id="brush-pattern-distance" class="pixPolish-form-field numeric-field" type="number" value="5" autocomplete="off" data-min="1" data-max="1000" data-step="1">
+                        </div>
+                    </div>
+                    <div id="not-erase-brush">
+                        <div class="pixPolish-control-wrap control-text-color">
+                            <label class="pixPolish-control-label">Brush Color</label>
+                            <div class="pixPolish-control">
+                                <input id="brush-color" type="text" class="pixPolish-colorpicker allow-empty" autocomplete="off" value="#ffffff" />
+                            </div>
+                        </div>
+                        <div class="pixPolish-control-wrap conditional">
+                            <label class="pixPolish-control-label">Brush Shadow</label>
+                            <div class="pixPolish-control pixPolish-toggle-control">
+                                <label class="pixPolish-toggle">
+                                    <input id="pixPolish-brush-shadow" class="pixPolish-toggle-checkbox" data-conditional="#line-shadow-settings" type="checkbox" autocomplete="off" />
+                                    <div class="pixPolish-toggle-switch"></div>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="line-shadow-settings" class="d-none conditional-settings">
+                            <div class="pixPolish-control-wrap">
+                                <label class="pixPolish-control-label">Blur</label>
+                                <div class="pixPolish-control">
+                                    <input id="brush-shadow-width" class="pixPolish-form-field" type="number" value="5" data-min="0" data-max="1000" step="1" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="pixPolish-control-wrap">
+                                <label class="pixPolish-control-label">Offset X</label>
+                                <div class="pixPolish-control">
+                                    <input id="brush-shadow-shadow-offset-x" class="pixPolish-form-field" type="number" value="5" data-min="0" data-max="100" step="1" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="pixPolish-control-wrap">
+                                <label class="pixPolish-control-label">Offset Y</label>
+                                <div class="pixPolish-control">
+                                    <input id="brush-shadow-shadow-offset-y" class="pixPolish-form-field" type="number" value="5" data-min="0" data-max="100" step="1" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="pixPolish-control-wrap control-text-color">
+                                <label class="pixPolish-control-label">Color</label>
+                                <div class="pixPolish-control">
+                                    <input id="brush-shadow-color" type="text" class="pixPolish-colorpicker allow-empty" autocomplete="off" value="#000000" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Drawing END -->
             <!-- Text START -->
             <div id="pixPolish-text" class="pixPolish-icon-panel-content panel-hide">
                 <!-- Add Text Button -->
@@ -794,6 +960,26 @@
                 </div>
             </div>
             <!-- Image END -->
+            
+            <!-- BG Start -->
+            <div id="pixPolish-bg" class="pixPolish-icon-panel-content panel-hide">
+                <div class="pixPolish-tabs">
+                    <ul class="pixPolish-tabs-menu">
+                        <li id="pixPolish-img-mode" class="active" data-target="#pixPolish-bg-mode">Image</li>
+                    </ul>
+                    
+                        <!-- Upload Image Button --><div class="pixPolish-file-field">
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                        <div id="pixPolish-bg-mode" class="pixPolish-tab active">
+                            <input type="file" name="image"/>
+                            <button type="submit" class="pixPolish-btn primary pixPolish-lg-btn btn-full"><span class="material-icons">upload</span><span>Upload</span></button>
+                        </div>
+                        </form>
+                    
+                    </div>
+                </div>
+            </div>
+            <!-- BG End -->
 
             <!-- Settings START -->
             <div id="pixPolish-settings" class="pixPolish-icon-panel-content panel-hide">
@@ -1017,6 +1203,24 @@
         </div>
     </div>
     <!-- Modal Save END -->
+    <!-- Modal History START -->
+    <div id="modal-history" class="pixPolish-modal">
+        <div class="pixPolish-modal-close" data-target="#modal-history"><span class="material-icons">close</span></div>
+        <div class="pixPolish-modal-wrap">
+            <div class="pixPolish-modal-inner">
+                <div class="pixPolish-modal-bg">
+                    <h3 class="pixPolish-history-title">History<button id="pixPolish-clear-history" type="button"
+                            class="pixPolish-btn danger"><span class="material-icons">clear</span>Clear History</button>
+                    </h3>
+                    <!-- History List - Don't remove ul element -->
+                    <ul id="pixPolish-history-list" class="pixPolish-template-list" data-max="50"></ul>
+                    <p class="pixPolish-history-count">Showing your last <span id="pixPolish-history-count"></span> actions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal History END -->
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
