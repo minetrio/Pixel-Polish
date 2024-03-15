@@ -4,7 +4,7 @@
   "description": "Backend for pixel polish.",
   "main": "index.js",
   "scripts": {
-    "build": "node index.js"
+    "start": "node index.js"
   },
   "author": "Pixel Polish",
   "license": "ISC",
