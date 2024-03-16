@@ -2534,7 +2534,7 @@ input[type="file"] {
     /*   top: 11px; */
     left: 40px;
     color: #0964b0;
-    content: "Upload File";
+    content: "Choose File";
   }
   
   input[type="file"]::after {
@@ -2556,7 +2556,7 @@ input[type="file"] {
     padding: 0 16px;
     height: 40px;
     cursor: pointer;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: 1px solid rgba(0, 0, 0, 0.16);
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
     margin-right: 16px;

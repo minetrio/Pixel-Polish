@@ -51,9 +51,8 @@
             </div>
             <!-- Save -->
             <div class="pixPolish-save">
-                <button id="pixPolish-save" type="button" class="pixPolish-btn primary pixPolish-modal-open" autocomplete="off" data-target="#modal-save" disabled><span class="material-icons">save</span><span class="pixPolish-btn-text">Save or Download</span></button>
+                <button id="pixPolish-save" type="button" class="pixPolish-btn primary pixPolish-modal-open" autocomplete="off" data-target="#modal-save" disabled><span class="material-icons">save</span><span class="pixPolish-btn-text">Download</span></button>
             </div>
-
         </div>
     </div>
     <!-- Top Bar END -->
@@ -502,9 +501,7 @@
                 <div class="pixPolish-tabs">
                     <!-- Frames Menu -->
                     <ul class="pixPolish-tabs-menu">
-                        <li class="active" data-target="#pixPolish-all-frames">All</li>
-                        <li data-target="#pixPolish-frame-favorites">My Favorites</li>
-                        <li data-target="#pixPolish-frame-options">Settings</li>
+                        <li class="active" data-target="#pixPolish-all-frames">Frames</li>
                     </ul>
                     <!-- All Frames -->
                     <div id="pixPolish-all-frames" class="pixPolish-tab active">
@@ -1041,55 +1038,7 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- Frames Favorites -->
-                    <div id="pixPolish-frame-favorites" class="pixPolish-tab">
-                        <div class="pixPolish-frames-grid">
-                            <div class="pixPolish-frame" data-elsource="files/frames/abstract/1.svg">
-                                <div class="pixPolish-img-wrap">
-                                    <div class="pixPolish-img-loader"></div><img class="lazy" data-src="files/frames/abstract/1.jpg" />
-                                </div>
-                                <div class="frame-favorite">
-                                    <button type="button" class="pixPolish-btn-simple star favorited" data-frameid="abstract/1"><span class="material-icons">star</span></button>
-                                </div>
-                            </div>
-                            <div class="pixPolish-frame" data-elsource="files/frames/bohemian/1.svg">
-                                <div class="pixPolish-img-wrap">
-                                    <div class="pixPolish-img-loader"></div><img class="lazy" data-src="files/frames/bohemian/1.jpg" />
-                                </div>
-                                <div class="frame-favorite">
-                                    <button type="button" class="pixPolish-btn-simple star favorited" data-frameid="bohemian/1"><span class="material-icons">star</span></button>
-                                </div>
-                            </div>
-                            <div class="pixPolish-frame" data-elsource="files/frames/grunge/2.svg">
-                                <div class="pixPolish-img-wrap">
-                                    <div class="pixPolish-img-loader"></div><img class="lazy" data-src="files/frames/grunge/2.jpg" />
-                                </div>
-                                <div class="frame-favorite">
-                                    <button type="button" class="pixPolish-btn-simple star favorited" data-frameid="grunge/2"><span class="material-icons">star</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Frames Options -->
-                    <div id="pixPolish-frame-options" class="pixPolish-tab">
-                        <div class="pixPolish-control-wrap label-block">
-                            <div class="pixPolish-control">
-                                <div class="pixPolish-btn-group icon-group">
-                                    <button id="pixPolish-rotate-right-frame" type="button" class="pixPolish-btn tooltip" data-title="Rotate Right"><span class="material-icons">rotate_right</span></button>
-                                    <button id="pixPolish-rotate-left-frame" type="button" class="pixPolish-btn tooltip" data-title="Rotate Left"><span class="material-icons">rotate_left</span></button>
-                                    <button id="pixPolish-flip-horizontal-frame" type="button" class="pixPolish-btn tooltip" data-title="Flip X"><span class="material-icons">flip</span></button>
-                                    <button id="pixPolish-flip-vertical-frame" type="button" class="pixPolish-btn tooltip" data-title="Flip Y"><span class="material-icons">flip</span></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pixPolish-control-wrap label-block">
-                            <label class="pixPolish-control-label">Fill Color</label>
-                            <div class="pixPolish-control">
-                                <input id="pixPolish-frame-color" type="text" class="pixPolish-colorpicker allow-empty" autocomplete="off" value="" />
-                                <div class="pixPolish-control-desc">May not work properly on multi-color frames.</div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
                 <div id="pixPolish-noframes" class="notice notice-warning">Nothing found.</div>
             </div>
@@ -1291,12 +1240,10 @@
                     </ul>
                     <div id="pixPolish-image-mode" class="pixPolish-tab active">
                         <!-- Upload Image Button -->
-<div class="pixPolish-file-field">
-    <input type="file" name="pixPolish-file" id="pixPolish-img-upload" class="pixPolish-hidden-file" accept="image/png, image/jpeg" multiple />
-    <label for="pixPolish-img-upload" class="pixPolish-btn primary pixPolish-lg-btn btn-full"><span class="material-icons">upload</span><span>Upload from computer</span></label>
-</div>
-                        <!-- Media Library Button -->
-                        <button id="pixPolish-img-media-library" type="button" class="pixPolish-btn primary pixPolish-lg-btn btn-full pixPolish-modal-open" data-target="#modal-media-library"><span class="material-icons">photo_library</span>Select From Media Library</button>
+                        <div class="pixPolish-file-field">
+                            <input type="file" name="pixPolish-file" id="pixPolish-img-upload" class="pixPolish-hidden-file" accept="image/png, image/jpeg" multiple />
+                            <label for="pixPolish-img-upload" class="pixPolish-btn primary pixPolish-lg-btn btn-full"><span class="material-icons">upload</span><span>Upload from computer</span></label>
+                        </div>
                         <!-- Image Settings -->
                         <div id="pixPolish-image-settings" class="pixPolish-sub-settings">
                             <div class="pixPolish-control-wrap">
@@ -1388,8 +1335,6 @@
                                 </div>
                             </div>
                             <hr />
-                            <button id="pixPolish-img-replace-media-library" type="button" class="pixPolish-btn pixPolish-lg-btn btn-full pixPolish-modal-open" data-target="#modal-media-library"><span class="material-icons">photo_library</span>Replace Image
-                            </button>
                         </div>
                     </div>
                     <div id="pixPolish-overlay-image-mode" class="pixPolish-tab">
@@ -1397,7 +1342,6 @@
                             <input type="file" name="pixPolish-file" id="pixPolish-overlay-img-upload" class="pixPolish-hidden-file" accept="image/png, image/jpeg" />
                             <label for="pixPolish-overlay-img-upload" class="pixPolish-btn primary pixPolish-lg-btn btn-full"><span class="material-icons">upload</span><span>Upload from computer</span></label>
                         </div>
-                        <button id="pixPolish-overlay-img-media-library" type="button" class="pixPolish-btn primary pixPolish-lg-btn btn-full pixPolish-modal-open" data-target="#modal-media-library"><span class="material-icons">photo_library</span>Select From Media Library</button>
                         <button id="pixPolish-overlay-delete" type="button" class="pixPolish-btn pixPolish-lg-btn btn-full"><span class="material-icons">delete</span>Remove Overlay Image</button>
                         <div class="notice notice-warning">It is useful only if your PNG image has transparent parts and the size of the image (or the aspect ratio) is equal to the canvas. The overlay image will over all objects on the canvas and will be stretched to fit the canvas.</div>
                     </div>
@@ -1405,23 +1349,24 @@
             </div>
             <!-- Image END -->
 
-                        <!-- BG Start -->
-                        <div id="pixPolish-bg" class="pixPolish-icon-panel-content panel-hide">
-                            <div class="pixPolish-tabs">
-                                <ul class="pixPolish-tabs-menu">
-                                    <li id="pixPolish-img-mode" class="active" data-target="#pixPolish-bg-mode">Image</li>
-                                </ul>
-                                    <!-- Upload Image Button --><div class="pixPolish-file-field">
-                                    <form action="/upload" method="POST" enctype="multipart/form-data">
-                                    <div id="pixPolish-bg-mode" class="pixPolish-tab active">
-                                        <input type="file" name="image"/>
-                                        <button type="submit" class="pixPolish-btn primary pixPolish-lg-btn btn-full"><span class="material-icons">upload</span><span>Upload</span></button>
-                                    </div>
-                                    </form>
-                                </div>
+            <!-- BG Start -->
+            <div id="pixPolish-bg" class="pixPolish-icon-panel-content panel-hide">
+                <div class="pixPolish-tabs">
+                    <ul class="pixPolish-tabs-menu">
+                        <li id="pixPolish-img-mode" class="active" data-target="#pixPolish-bg-mode">Image</li>
+                    </ul>
+                    <!-- Upload Image Button -->
+                    <div class="pixPolish-file-field">
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <div id="pixPolish-bg-mode" class="pixPolish-tab active">
+                                <input type="file" name="image" />
+                                <button type="submit" class="pixPolish-btn primary pixPolish-lg-btn btn-full"><span class="material-icons">upload</span><span>Upload</span></button>
                             </div>
-                        </div>
-                        <!-- BG End -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- BG End -->
             <!-- QR Code START -->
             <div id="pixPolish-qrcode" class="pixPolish-icon-panel-content panel-hide">
                 <div id="pixPolish-qrcode-settings">
@@ -1490,7 +1435,7 @@
                 <hr/>
                 <button id="pixPolish-generate-qr-code" type="button" class="pixPolish-btn primary pixPolish-lg-btn btn-full"><span class="material-icons">qr_code</span>Generate QR Code</button>
             </div>
-             <!-- QR Code END -->
+            <!-- QR Code END -->
             <!-- Drawing START -->
             <div id="pixPolish-draw" class="pixPolish-icon-panel-content panel-hide">
                 <!-- Start Drawing Button -->
@@ -1612,17 +1557,17 @@
                         </div>
                     </div>
                     <div class="pixPolish-control-wrap control-text-color">
-                            <label class="pixPolish-control-label">Ruler Guide Color</label>
-                            <div class="pixPolish-control">
-                                <input id="ruler-guide-color" type="text" class="pixPolish-colorpicker allow-empty preference" autocomplete="off" value="#6658ea" />
-                            </div>
+                        <label class="pixPolish-control-label">Ruler Guide Color</label>
+                        <div class="pixPolish-control">
+                            <input id="ruler-guide-color" type="text" class="pixPolish-colorpicker allow-empty preference" autocomplete="off" value="#6658ea" />
                         </div>
-                        <div class="pixPolish-control-wrap label-block">
-                            <label class="pixPolish-control-label slider-label">Ruler Guide Size<span>1</span></label>
-                            <div class="pixPolish-control">
-                                <input id="ruler-guide-size" type="range" min="1" max="10" value="1" step="1" class="pixPolish-slider preference" autocomplete="off">
-                            </div>
+                    </div>
+                    <div class="pixPolish-control-wrap label-block">
+                        <label class="pixPolish-control-label slider-label">Ruler Guide Size<span>1</span></label>
+                        <div class="pixPolish-control">
+                            <input id="ruler-guide-size" type="range" min="1" max="10" value="1" step="1" class="pixPolish-slider preference" autocomplete="off">
                         </div>
+                    </div>
                 </div>
                 <div class="pixPolish-control-wrap label-block">
                     <div class="pixPolish-control">
@@ -1730,8 +1675,6 @@
                                         <input type="file" name="pixPolish-image-upload" id="pixPolish-image-upload" class="pixPolish-hidden-file" accept="image/png, image/jpeg" />
                                         <label for="pixPolish-image-upload" class="pixPolish-btn primary pixPolish-lg-btn"><span class="material-icons">upload</span><span>Upload Image</span></label>
                                     </div>
-                                    <button id="pixPolish-media-library" type="button" class="pixPolish-btn primary pixPolish-lg-btn pixPolish-modal-open" data-target="#modal-media-library"><span class="material-icons">photo_library</span>Select From Media Library
-                                    </button>
                                 </div>
                                 <div class="pixPolish-keep">
                                     <label class="pixPolish-checkbox">
@@ -1754,8 +1697,7 @@
                         <div class="pixPolish-templates-wrap">
                             <div class="pixPolish-tabs">
                                 <ul class="pixPolish-tabs-menu">
-                                    <li class="active" data-target="#pixPolish-all-templates">All</li>
-                                    <li data-target="#pixPolish-templates-favorites">My Favorites</li>
+                                    <li class="active" data-target="#pixPolish-all-templates">Templates</li>
                                 </ul>
                                 <div id="pixPolish-all-templates" class="pixPolish-tab active">
                                     <div class="pixPolish-templates-menu-wrap">
@@ -1961,7 +1903,7 @@
                                                             <img class="lazy" data-src="files/templates/img/32.jpg" title="Quote - Instagram Post - 1080x1080px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Quote - Instagram Post - 1080x1080px 
+                                                            Quote - Instagram Post - 1080x1080px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1975,7 +1917,7 @@
                                                             <img class="lazy" data-src="files/templates/img/22.jpg" title="Modern Collage - 3 Photos - 2000x2000px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Modern Collage - 3 Photos - 2000x2000px 
+                                                            Modern Collage - 3 Photos - 2000x2000px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1989,7 +1931,7 @@
                                                             <img class="lazy" data-src="files/templates/img/4.jpg" title="Quote - 900x600px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Quote - 900x600px 
+                                                            Quote - 900x600px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2003,7 +1945,7 @@
                                                             <img class="lazy" data-src="files/templates/img/26.jpg" title="Blog Banner - 2240x1260px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Blog Banner - 2240x1260px 
+                                                            Blog Banner - 2240x1260px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2017,7 +1959,7 @@
                                                             <img class="lazy" data-src="files/templates/img/1.jpg" title="Sale Banner - Instagram Post - Discount Offer - Square - 1080x1080px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Sale Banner - Instagram Post - Discount Offer - Square - 1080x1080px 
+                                                            Sale Banner - Instagram Post - Discount Offer - Square - 1080x1080px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2031,7 +1973,7 @@
                                                             <img class="lazy" data-src="files/templates/img/10.jpg" title="Summer Sale - Facebook Ad - 1200x628px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Summer Sale - Facebook Ad - 1200x628px 
+                                                            Summer Sale - Facebook Ad - 1200x628px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2045,7 +1987,7 @@
                                                             <img class="lazy" data-src="files/templates/img/17.jpg" title="Kids Style Collage - 2 Photos - 2000x1300px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Kids Style Collage - 2 Photos - 2000x1300px 
+                                                            Kids Style Collage - 2 Photos - 2000x1300px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2059,7 +2001,7 @@
                                                             <img class="lazy" data-src="files/templates/img/33.jpg" title="Happy Childrens Day - Facebook Post - 940x788px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Happy Childrens Day - Facebook Post - 940x788px 
+                                                            Happy Childrens Day - Facebook Post - 940x788px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2073,7 +2015,7 @@
                                                             <img class="lazy" data-src="files/templates/img/6.jpg" title="Fitness Banner - Medium Rectangle - 300x250px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Fitness Banner - Medium Rectangle - 300x250px 
+                                                            Fitness Banner - Medium Rectangle - 300x250px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2087,7 +2029,7 @@
                                                             <img class="lazy" data-src="files/templates/img/37.jpg" title="Quote - Twitter Post - 1600x900px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Quote - Twitter Post - 1600x900px 
+                                                            Quote - Twitter Post - 1600x900px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2101,7 +2043,7 @@
                                                             <img class="lazy" data-src="files/templates/img/41.jpg" title="Real Estate - Facebook Post - 940x788px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Real Estate - Facebook Post - 940x788px 
+                                                            Real Estate - Facebook Post - 940x788px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2115,7 +2057,7 @@
                                                             <img class="lazy" data-src="files/templates/img/11.jpg" title="Sale Banner - Facebook Ad - 1200x628px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Sale Banner - Facebook Ad - 1200x628px 
+                                                            Sale Banner - Facebook Ad - 1200x628px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2142,7 +2084,7 @@
                                                             <img class="lazy" data-src="files/templates/img/7.jpg" title="Fitness Banner - Medium Rectangle - 300x250px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Fitness Banner - Medium Rectangle - 300x250px 
+                                                            Fitness Banner - Medium Rectangle - 300x250px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2156,7 +2098,7 @@
                                                             <img class="lazy" data-src="files/templates/img/3.jpg" title="Quote - 800x600px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Quote - 800x600px 
+                                                            Quote - 800x600px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2170,7 +2112,7 @@
                                                             <img class="lazy" data-src="files/templates/img/42.jpg" title="Business Banner - Instagram Post - 1080x1080px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Business Banner - Instagram Post - 1080x1080px 
+                                                            Business Banner - Instagram Post - 1080x1080px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2184,7 +2126,7 @@
                                                             <img class="lazy" data-src="files/templates/img/13.jpg" title="Business Facebook Post - 940x788px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Business Facebook Post - 940x788px 
+                                                            Business Facebook Post - 940x788px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2198,7 +2140,7 @@
                                                             <img class="lazy" data-src="files/templates/img/5.jpg" title="App Banner - 2000x1300px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            App Banner - 2000x1300px 
+                                                            App Banner - 2000x1300px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2212,7 +2154,7 @@
                                                             <img class="lazy" data-src="files/templates/img/34.jpg" title="Business Blog Banner - 2240x1260px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Business Blog Banner - 2240x1260px 
+                                                            Business Blog Banner - 2240x1260px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2240,7 +2182,7 @@
                                                             <img class="lazy" data-src="files/templates/img/30.jpg" title="Blog Banner - 2240x1260px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Blog Banner - 2240x1260px 
+                                                            Blog Banner - 2240x1260px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2254,7 +2196,7 @@
                                                             <img class="lazy" data-src="files/templates/img/19.jpg" title="Stylish Collage - 3 Photos - 2000x2000px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Stylish Collage - 3 Photos - 2000x2000px 
+                                                            Stylish Collage - 3 Photos - 2000x2000px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2268,7 +2210,7 @@
                                                             <img class="lazy" data-src="files/templates/img/9.jpg" title="Pet Shop Banner - Billboard - 970x250px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Pet Shop Banner - Billboard - 970x250px 
+                                                            Pet Shop Banner - Billboard - 970x250px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2282,7 +2224,7 @@
                                                             <img class="lazy" data-src="files/templates/img/35.jpg" title="Blog Banner - 2240x1260px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Blog Banner - 2240x1260px 
+                                                            Blog Banner - 2240x1260px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2296,7 +2238,7 @@
                                                             <img class="lazy" data-src="files/templates/img/24.jpg" title="Christmas Banner - Leaderboard - 728x90px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Christmas Banner - Leaderboard - 728x90px 
+                                                            Christmas Banner - Leaderboard - 728x90px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2310,7 +2252,7 @@
                                                             <img class="lazy" data-src="files/templates/img/38.jpg" title="Blog Banner - 2240x1260px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Blog Banner - 2240x1260px 
+                                                            Blog Banner - 2240x1260px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2324,7 +2266,7 @@
                                                             <img class="lazy" data-src="files/templates/img/40.jpg" title="Fashion Banner - Facebook Ad - 1200x628px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Fashion Banner - Facebook Ad - 1200x628px 
+                                                            Fashion Banner - Facebook Ad - 1200x628px
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2338,38 +2280,10 @@
                                                             <img class="lazy" data-src="files/templates/img/31.jpg" title="Quote - Twitter Post - 1600x900px" />
                                                         </div>
                                                         <div class="pixPolish-masonry-item-desc">
-                                                            Quote - Twitter Post - 1600x900px 
+                                                            Quote - Twitter Post - 1600x900px
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="pixPolish-templates-favorites" class="pixPolish-tab">
-                                    <div class="pixPolish-grid template-grid template-selection paginated" data-perpage="21">
-                                        <div class="grid-item" data-keyword="Blog Banner - 2240x1260px" data-category="blog-banners">
-                                            <div class="template-favorite">
-                                                <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star</span></button>
-                                            </div>
-                                            <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/25.json">
-                                                <div class="pixPolish-img-wrap">
-                                                    <div class="pixPolish-img-loader"></div>
-                                                    <img class="lazy" data-src="files/templates/img/25.jpg" title="Blog Banner - 2240x1260px" />
-                                                </div>
-                                                <div class="pixPolish-masonry-item-desc">Blog Banner - 2240x1260px</div>
-                                            </div>
-                                        </div>
-                                        <div class="grid-item" data-keyword="Modern Collage - 2 Photos - 2000x1300px" data-category="collage">
-                                            <div class="template-favorite">
-                                                <button type="button" class="pixPolish-btn-simple star" data-templateid=""><span class="material-icons">star</span></button>
-                                            </div>
-                                            <div class="pixPolish-masonry-item-inner pixPolish-select-template" data-json="files/templates/json/20.json">
-                                                <div class="pixPolish-img-wrap">
-                                                    <div class="pixPolish-img-loader"></div>
-                                                    <img class="lazy" data-src="files/templates/img/20.jpg" title="Modern Collage - 2 Photos - 2000x1300px" />
-                                                </div>
-                                                <div class="pixPolish-masonry-item-desc"> Modern Collage - 2 Photos - 2000x1300px</div>
                                             </div>
                                         </div>
                                     </div>
@@ -2452,68 +2366,10 @@
                 <div class="pixPolish-tabs">
                     <!-- Menu -->
                     <ul class="pixPolish-tabs-menu">
-                        <li class="active" data-target="#modal-tab-save"><span class="material-icons">save</span>Save
-                        </li>
                         <li data-target="#modal-tab-download"><span class="material-icons">download</span>Download</li>
                     </ul>
-                    <!-- Save File -->
-                    <div id="modal-tab-save" class="pixPolish-tab active">
-                        <div id="pixPolish-save-as-img">
-                            <div class="pixPolish-block-50">
-                                <div>
-                                    <label>File Name</label>
-                                    <input id="pixPolish-save-img-name" class="pixPolish-form-field pixPolish-file-name" type="text" value="" autocomplete="off" data-default="">
-                                </div>
-                                <button id="pixPolish-save-img" type="button" class="pixPolish-btn primary"><span class="material-icons">save</span>Save As Image</button>
-                            </div>
-                            <div class="pixPolish-block-33">
-                                <div>
-                                    <label>DPI</label>
-                                    <select id="pixPolish-save-img-dpi" class="pixPolish-select" autocomplete="off">
-                                        <option selected value="72">72 DPI - Monitor Resolution</option>
-                                        <option value="96">96 DPI</option>
-                                        <option value="144">144 DPI</option>
-                                        <option value="300">300 DPI - Printer Resolution</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label>Image Quality</label>
-                                    <select id="pixPolish-save-img-quality" class="pixPolish-select" autocomplete="off">
-                                        <option selected value="1">100%</option>
-                                        <option value="0.9">90%</option>
-                                        <option value="0.8">80%</option>
-                                        <option value="0.7">70%</option>
-                                        <option value="0.6">60%</option>
-                                        <option value="0.5">50%</option>
-                                        <option value="0.4">40%</option>
-                                        <option value="0.3">30%</option>
-                                        <option value="0.2">20%</option>
-                                        <option value="0.1">10%</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label>File Format</label>
-                                    <select id="pixPolish-save-img-format" class="pixPolish-select" autocomplete="off">
-                                        <option selected value="jpeg">JPEG</option>
-                                        <option value="png">PNG</option>
-                                        <option value="svg">SVG</option>
-                                        <option value="webp">WEBP</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="pixPolish-save-as-json">
-                            <div class="pixPolish-block-50">
-                                <div>
-                                    <label>File Name</label>
-                                    <input id="pixPolish-json-save-name" class="pixPolish-form-field pixPolish-file-name" type="text" value="" autocomplete="off" data-default="">
-                                </div>
-                                <button id="pixPolish-json-save" type="button" class="pixPolish-btn primary"><span class="material-icons">save</span>Save As Template</button>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Download File -->
-                    <div id="modal-tab-download" class="pixPolish-tab ">
+                    <div id="modal-tab-download" class="pixPolish-tab active">
                         <div id="pixPolish-download-as-img">
                             <div class="pixPolish-block-50">
                                 <div>
@@ -2573,99 +2429,7 @@
         </div>
     </div>
     <!-- Modal Save END -->
-    <!-- Modal Media Library START -->
-    <div id="modal-media-library" class="pixPolish-modal">
-        <div class="pixPolish-modal-close" data-target="#modal-media-library"><span class="material-icons">close</span>
-        </div>
-        <div class="pixPolish-modal-wrap">
-            <div class="pixPolish-modal-inner">
-                <div class="pixPolish-tabs">
-                    <!-- Menu -->
-                    <ul class="pixPolish-tabs-menu">
-                        <li class="active" data-target="#library-my-images"><span class="material-icons">photo_library</span>My Images</li>
-                        <li data-target="#library-all-images"><span class="material-icons">photo_library</span>Other Images
-                        </li>
-                    </ul>
-                    <!-- My Images -->
-                    <div id="library-my-images" class="pixPolish-tab active">
-                        <div id="pixPolish-library-my-menu">
-                            <div>
-                                <form class="uploadImgToLibrary" enctype="multipart/form-data">
-                                    <div class="pixPolish-file-field">
-                                        <input type="file" name="pixPolish-library-upload-img" id="pixPolish-library-upload-img" class="pixPolish-hidden-file" accept="image/png, image/jpeg" />
-                                        <label for="pixPolish-library-upload-img" class="pixPolish-btn primary"><span class="material-icons">upload</span><span>Upload Image</span></label>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="pixPolish-search-box">
-                                <input type="search" class="pixPolish-form-field" placeholder="Search by title..." autocomplete="off" />
-                                <button id="pixPolish-library-my-search" type="button" class="pixPolish-btn primary"><span class="material-icons">search</span></button>
-                            </div>
-                        </div>
-                        <div id="pixPolish-library-my" class="pixPolish-grid media-library-grid paginated" data-perpage="18">
-                            <div class="pixPolish-masonry-item" data-keyword="lorem kotem">
-                                <div class="pixPolish-library-delete" data-target=""><span class="material-icons">remove</span></div>
-                                <div class="pixPolish-masonry-item-inner">
-                                    <div class="pixPolish-img-wrap">
-                                        <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="assets/placeholder.jpg" data-full="assets/placeholder-big.jpg" data-filename="Lorem" title="Lorem ipsum dolor" />
-                                    </div>
-                                    <div class="pixPolish-masonry-item-desc">Lorem ipsum dolor</div>
-                                </div>
-                            </div>
-                            <div class="pixPolish-masonry-item" data-keyword="ipsum">
-                                <div class="pixPolish-library-delete" data-target=""><span class="material-icons">remove</span></div>
-                                <div class="pixPolish-masonry-item-inner">
-                                    <div class="pixPolish-img-wrap">
-                                        <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="assets/placeholder.jpg" data-full="assets/placeholder-big.jpg" data-filename="Lorem" title="Lorem ipsum dolor" />
-                                    </div>
-                                    <div class="pixPolish-masonry-item-desc">Lorem ipsum dolor</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="pixPolish-library-my-noimg" class="notice notice-warning d-none">Nothing found.</div>
-                    </div>
-                    <!-- All Images -->
-                    <div id="library-all-images" class="pixPolish-tab">
-                        <div id="pixPolish-library-all-menu">
-                            <div></div>
-                            <div class="pixPolish-search-box">
-                                <input type="search" class="pixPolish-form-field" placeholder="Search by title..." autocomplete="off" />
-                                <button id="pixPolish-library-all-search" type="button" class="pixPolish-btn primary"><span class="material-icons">search</span></button>
-                            </div>
-                        </div>
-                        <div id="pixPolish-library-all" class="pixPolish-grid media-library-grid paginated" data-perpage="18">
-                            <div class="pixPolish-masonry-item" data-keyword="lorem">
-                                <div class="pixPolish-library-delete" data-target=""><span class="material-icons">remove</span></div>
-                                <div class="pixPolish-masonry-item-inner">
-                                    <div class="pixPolish-img-wrap">
-                                        <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="assets/placeholder.jpg" data-full="assets/placeholder-big.jpg" data-filename="Lorem" title="Lorem"
-                                        />
-                                    </div>
-                                    <div class="pixPolish-masonry-item-desc">Lorem ipsum dolor</div>
-                                </div>
-                            </div>
-                            <div class="pixPolish-masonry-item" data-keyword="ipsum">
-                                <div class="pixPolish-library-delete" data-target=""><span class="material-icons">remove</span></div>
-                                <div class="pixPolish-masonry-item-inner">
-                                    <div class="pixPolish-img-wrap">
-                                        <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="assets/placeholder.jpg" data-full="assets/placeholder-big.jpg" data-filename="Lorem" title="Lorem"
-                                        />
-                                    </div>
-                                    <div class="pixPolish-masonry-item-desc">Lorem ipsum dolor</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="pixPolish-library-all-noimg" class="notice notice-warning d-none"><strong>Nothing found.</strong></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Media Library END -->
+
     <!-- Modal SVG Library START -->
     <div id="modal-svg-library" class="pixPolish-modal">
         <div class="pixPolish-modal-close" data-target="#modal-svg-library"><span class="material-icons">close</span>
@@ -2701,8 +2465,7 @@
                                 <div class="pixPolish-masonry-item-inner">
                                     <div class="pixPolish-img-wrap">
                                         <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="files/elements/abstract-shapes/1.svg" data-full="files/elements/abstract-shapes/1.svg" data-filename="abstract-shape" title="Abstract Shape"
-                                        />
+                                        <img class="lazy" data-src="files/elements/abstract-shapes/1.svg" data-full="files/elements/abstract-shapes/1.svg" data-filename="abstract-shape" title="Abstract Shape" />
                                     </div>
                                     <div class="pixPolish-masonry-item-desc">Abstract Shape</div>
                                 </div>
@@ -2712,8 +2475,7 @@
                                 <div class="pixPolish-masonry-item-inner">
                                     <div class="pixPolish-img-wrap">
                                         <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="files/elements/abstract-shapes/2.svg" data-full="files/elements/abstract-shapes/2.svg" data-filename="another-shape" title="Another Shape"
-                                        />
+                                        <img class="lazy" data-src="files/elements/abstract-shapes/2.svg" data-full="files/elements/abstract-shapes/2.svg" data-filename="another-shape" title="Another Shape" />
                                     </div>
                                     <div class="pixPolish-masonry-item-desc">Another Shape</div>
                                 </div>
@@ -2736,8 +2498,7 @@
                                 <div class="pixPolish-masonry-item-inner">
                                     <div class="pixPolish-img-wrap">
                                         <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="files/elements/abstract-shapes/1.svg" data-full="files/elements/abstract-shapes/1.svg" data-filename="abstract-shape" title="Abstract Shape"
-                                        />
+                                        <img class="lazy" data-src="files/elements/abstract-shapes/1.svg" data-full="files/elements/abstract-shapes/1.svg" data-filename="abstract-shape" title="Abstract Shape" />
                                     </div>
                                     <div class="pixPolish-masonry-item-desc">Abstract Shape</div>
                                 </div>
@@ -2747,8 +2508,7 @@
                                 <div class="pixPolish-masonry-item-inner">
                                     <div class="pixPolish-img-wrap">
                                         <div class="pixPolish-img-loader"></div>
-                                        <img class="lazy" data-src="files/elements/abstract-shapes/2.svg" data-full="files/elements/abstract-shapes/2.svg" data-filename="another-shape" title="Another Shape"
-                                        />
+                                        <img class="lazy" data-src="files/elements/abstract-shapes/2.svg" data-full="files/elements/abstract-shapes/2.svg" data-filename="another-shape" title="Another Shape" />
                                     </div>
                                     <div class="pixPolish-masonry-item-desc">Another Shape</div>
                                 </div>
@@ -2785,13 +2545,13 @@
     <script src="js/fabric.min.js"></script>
     <script src="js/plugins.min.js"></script>
     <script src="js/pixPolish.min.js"></script>
-     <!-- Canvas Ruler -->
+    <!-- Canvas Ruler -->
     <script type="text/javascript">
         if (document.body.clientWidth >= 1200) {
             var evt = new Event('pixPolish-ruler'),
             dragdrop = new Dragdrop(evt),
             rg  = new RulersGuides(evt, dragdrop, document.getElementById("pixPolish-ruler"));
-        }        
+        }
     </script>
     <script src="js/custom.js"></script>
     <!-- Translation Strings -->
