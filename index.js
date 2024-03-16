@@ -88,7 +88,7 @@ app.post("/upload", async (req, res) => {
             }
 
             // Clean up temporary file (optional)
-            // fs.unlinkSync(tempFilePath);
+            fs.unlinkSync(tempFilePath);
         } catch (error) {
             console.error('Error removing background:', error);
             return res.status(500).send('Error removing background');
